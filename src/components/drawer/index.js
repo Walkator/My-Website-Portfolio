@@ -4,18 +4,85 @@ import iconMobile from '../../images/Mobile.svg';
 import iconDatabase from '../../images/Database.svg';
 import iconTerminal from '../../images/Terminal.svg';
 
+const Wrapper = styled.div`
+    position: absolute;
+    width: 0px;
+    height: 50%;
+    left: 50%;
+    top: 1313px;
+
+    @media (max-width: 750px) {
+        top: 1520px;
+    }
+`;
+
 const Container = styled.div`
     position: absolute;
     width: 447px;
     height: 452px;
-    left: 273px;
-    top: 1313px;
+    left: -700px;
+    top: 0px;
 
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+
+    @media (max-width: 1420px) {
+        left: -500px;
+    }
+
+    @media (max-width: 1050px) {
+        left: -220px;
+    }
+`;
+
+const Container2 = styled.div`
+    position: absolute;
+    width: 447px;
+    height: 452px;
+    left: -230px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    @media (max-width: 1420px) {
+        left: 50px;
+    }
+
+    @media (max-width: 1050px) {
+        left: -220px;
+        top: 482px;
+    }
+`;
+
+const Container3 = styled.div`
+    position: absolute;
+    width: 447px;
+    height: 452px;
+    left: 240px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+
+    @media (max-width: 1420px) {
+        top: 490px;
+        left: -235px;
+    }
+
+    @media (max-width: 1050px) {
+        top: 964px;
+        left: -220px;
+    }
 `;
 
 
@@ -103,7 +170,7 @@ class Drawer extends React.Component {
 
     render() {
         return (
-            <>
+            <Wrapper>
                 <Container>
                     <Image src={iconTerminal} />
                     <Title>Backed Develoment</Title>
@@ -111,24 +178,41 @@ class Drawer extends React.Component {
                     <TextPre>Languages & tools I've learned and used:</TextPre>
                     <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
                 </Container>
-                <Container style={{'left' : 736}}>
+                <Container2>
                     <Image src={iconDatabase} />
                     <Title>Database Develoment</Title>
                     <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
                     <TextPre>Languages & tools I've learned and used:</TextPre>
                     <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
-                </Container>
-                <Container style={{'left' : 1199}}>
+                </Container2>
+                <Container3>
                     <Image src={iconMobile} />
                     <Title>Mobile Develoment</Title>
                     <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
                     <TextPre>Languages & tools I've learned and used:</TextPre>
                     <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
-                </Container>
-            </>
+                </Container3>
+            </Wrapper>
         );
     }
 }
 
 
 export default Drawer;
+
+/**
+ *  <Container2 style={{'left' : 736}}>
+                    <Image src={iconDatabase} />
+                    <Title>Database Develoment</Title>
+                    <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
+                    <TextPre>Languages & tools I've learned and used:</TextPre>
+                    <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
+                </Container2>
+                <Container3 style={{'left' : 1199}}>
+                    <Image src={iconMobile} />
+                    <Title>Mobile Develoment</Title>
+                    <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
+                    <TextPre>Languages & tools I've learned and used:</TextPre>
+                    <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
+                </Container3>
+ */

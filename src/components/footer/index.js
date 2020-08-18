@@ -2,21 +2,39 @@ import React from 'react';
 import styled from 'styled-components';
 import { render } from '@testing-library/react';
 
-const Wrapper = styled.div`
+const Background = styled.div`
     position: absolute;
-    width: 1920px;
+    width: 100%;
     height: 500px;
-    left: 0px;
+    left: 0%;
     top: 1975px;
 
-    background: #222831;
+    background:  #222831;
+    @media (max-width: 750px) {
+        height: 500px;
+    }
+`;
+
+const Wrapper = styled.div`s
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
 `;
 
 const WrapperStart = styled.div`
     position: absolute;
-    width: 1373px;
-    height: 190px;
-    left: 272px;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: -50px;
+`;
+
+const Start = styled.div`
+    position: absolute;
+    width: 1355px;
+    height: 200px;
+    left: 0px;
     top: -100px;
 
     background: #222431;
@@ -146,21 +164,25 @@ class Footer extends React.Component {
 
     render() {
         return (
-            <Wrapper>
-                <WrapperStart>
-                    <TittleWrapperStart>Start a proyect</TittleWrapperStart>
-                    <TextWrapperStart>Cras id sodales enim. Suspendisse ac nunc ut nisi vestibulum.</TextWrapperStart>
-                    <ButtonWrapperStart>
-                        <TextButtonWrapperStart>Contact</TextButtonWrapperStart>
-                    </ButtonWrapperStart>
-                </WrapperStart>
-                <Image></Image>
-                <Line></Line>
-                <Eclipse></Eclipse>
-                <Eclipse style={{'left': 935}}></Eclipse>
-                <Eclipse style={{'left': 1027}}></Eclipse>
-                <Terms>Terms & Conditions Privacy Policy Copyright © 2020 Walkator Ltd. All rights reserved. Site credit.</Terms>
-            </Wrapper>
+            <Background>
+                <Wrapper>
+                    <WrapperStart>
+                        <Start>
+                            <TittleWrapperStart>Start a proyect</TittleWrapperStart>
+                            <TextWrapperStart>Cras id sodales enim. Suspendisse ac nunc ut nisi vestibulum.</TextWrapperStart>
+                            <ButtonWrapperStart>
+                                <TextButtonWrapperStart>Contact</TextButtonWrapperStart>
+                            </ButtonWrapperStart>
+                        </Start>
+                    </WrapperStart>
+                    <Image></Image>
+                    <Line></Line>
+                    <Eclipse></Eclipse>
+                    <Eclipse style={{'left': 935}}></Eclipse>
+                    <Eclipse style={{'left': 1027}}></Eclipse>
+                    <Terms>Terms & Conditions Privacy Policy Copyright © 2020 Walkator Ltd. All rights reserved. Site credit.</Terms>
+                </Wrapper>
+            </Background>
         );
     }
 };
