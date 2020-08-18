@@ -1,5 +1,11 @@
 import React from 'react';
-import Header from '../../components/header/index'
+import Header from '../../components/header/index';
+import Front from '../../components/front/index';
+import Description from '../../components/description/index';
+import Drawer from '../../components/drawer/index';
+import Footer from '../../components/footer/index';
+
+
 
 class LandingPage extends React.Component {
 
@@ -7,8 +13,10 @@ class LandingPage extends React.Component {
         return (
             <>
                 <Header></Header>
-                <h1>asdasdasdasd</h1>
-
+                <Front></Front>
+                <Description></Description>
+                <Drawer></Drawer>
+                <Footer></Footer>
             </>        
         );
     }

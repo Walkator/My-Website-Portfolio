@@ -41,37 +41,11 @@ const Terms = styled.h1`
 `;
 
 
-const Eclipse1 = styled.button`
+const Eclipse = styled.button`
     position: absolute;
     width: 48px;
     height: 48px;
     left: 843px;
-    top: 309px;
-
-    background: #222831;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 50%;
-`;
-
-const Eclipse2 = styled.button`
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 935px;
-    top: 309px;
-
-    background: #222831;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 50%;
-`;
-
-const Eclipse3 = styled.button`
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    left: 1027px;
     top: 309px;
 
     background: #222831;
@@ -182,9 +156,9 @@ class Footer extends React.Component {
                 </WrapperStart>
                 <Image></Image>
                 <Line></Line>
-                <Eclipse1></Eclipse1>
-                <Eclipse2></Eclipse2>
-                <Eclipse3></Eclipse3>
+                <Eclipse></Eclipse>
+                <Eclipse style={{'left': 935}}></Eclipse>
+                <Eclipse style={{'left': 1027}}></Eclipse>
                 <Terms>Terms & Conditions Privacy Policy Copyright © 2020 Walkator Ltd. All rights reserved. Site credit.</Terms>
             </Wrapper>
         );
