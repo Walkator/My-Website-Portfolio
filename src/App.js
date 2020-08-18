@@ -9,7 +9,10 @@ import {
 import './App.css';
 
 import Header from './components/header/index';
+import Drawer from './components/drawer/index';
 import Footer from './components/footer/index';
+import Description from './components/description/index';
+import Front from './components/front/index';
 import LandingPage from './pages/landing/index';
 import Portfolio from './pages/portfolio/index';
 import Contact from './pages/contact/index';
@@ -23,6 +26,9 @@ function App() {
     <Router>
       <div className="App">
       <Header></Header>
+      <Front></Front>
+      <Description></Description>
+      <Drawer></Drawer>
       <Footer></Footer>
 
 
