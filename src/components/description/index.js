@@ -78,10 +78,8 @@ class Description extends React.Component {
                     <Title>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Title>
                     <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec ex ac lorem maximus efficitur ac eget metus. Curabitur dolor dui, imperdiet nec felis vitae, efficitur pretium turpis. Maecenas tristique, orci cursus gravida gravida, orci diam tempus ipsum, sit amet lobortis velit enim ut arcu. Cras sagittis tincidunt massa vitae tincidunt. Vivamus at luctus tortor, egestas dignissim metus. Nunc semper nec urna vel cursus. Donec sed nisi mauris. Nulla non hendrerit odio. Fusce egestas est vitae mollis viverra. Aenean nec magna mi. Donec vestibulum facilisis ex, sed laoreet erat mattis eu. Fusce porttitor leo risus.</Text>
                 </Wrapper>
-                
             </Background>
 
-            
         );
     }
 }
