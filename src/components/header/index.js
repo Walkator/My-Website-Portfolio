@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from "../../images/logo.jpg";
+import { Link } from 'react-router-dom';
 
-const Menu = styled.div`
-    position: absolute;
+const Menu = styled.nav`
+    botton: 100;
     width: 100%;
-    height: 100px;
 `;
 
 const Image = styled.img`
@@ -111,12 +111,18 @@ class Header extends React.Component {
     render() {
         return (
             <Menu>
-                <Image src={Logo}></Image>
-                <Button sytle={{'text': "asd"}}>
-                    <ButtonText>Get in touch</ButtonText>
-                </Button>
+                <Link to='/'>
+                    <Image src={Logo}></Image>
+                </Link>
+                <Link to='/contact'>
+                    <Button>
+                        <ButtonText >Get in touch</ButtonText>
+                    </Button>
+                </Link>
     
-                <ButtonPortfolio>Portfolio</ButtonPortfolio>
+                <Link to='/portfolio'>
+                    <ButtonPortfolio>Portfolio</ButtonPortfolio>
+                </Link>
             </Menu>
         );
     }

@@ -19,23 +19,11 @@ function App() {
   return (
     <Router>
       <div className="App">
-      
-        <LandingPage />
-
-      <Switch>
-        <Route path="/">
-          
-        </Route>
-
-        <Route path="/portfolio">
-          <Portfolio></Portfolio>
-        </Route>
-
-        <Route path="/contact">
-          <Contact></Contact>
-        </Route>
-      </Switch>
-
+        <Switch>
+          <Route path="/" component={LandingPage} exact />
+          <Route path="/portfolio" component={Portfolio} exact />
+          <Route path="/contact" component={Contact} exact />
+        </Switch>
     </div>
     
     </Router>
