@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect} from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Logo from "../../images/logo.jpg";
 
 const Background = styled.div`
@@ -40,8 +42,8 @@ const Start = styled.div`
     }
 
     @media (max-width: 750px) {
-        width: 500px;
-        left: -250px;
+        width: 400px;
+        left: -200px;
     }
 `;
 
@@ -137,7 +139,7 @@ const TittleWrapperStart = styled.h1`
 
     @media (max-width: 750px) {
         width: 539px;
-        left: -20px;
+        left: -65px;
         font-size: 24px;
     }
 `;
@@ -169,7 +171,7 @@ const TextWrapperStart = styled.h1`
     }
 
     @media (max-width: 750px) {
-        left: 60px;
+        left: 15px;
         font-size: 16px;
     }
 `;
@@ -187,6 +189,11 @@ const ButtonWrapperStart = styled.button`
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 8px;
 
+    &:hover {
+        cursor: pointer;
+        border: 2px solid #00d9e3;
+    }
+
     @media (max-width: 1420px) {
         top: 130px;
         left: 410px;
@@ -199,7 +206,7 @@ const ButtonWrapperStart = styled.button`
 
     @media (max-width: 750px) {
         top: 130px;
-        left: 160px;
+        left: 115px;
     }
 `;
 
@@ -217,13 +224,25 @@ const TextButtonWrapperStart = styled.h1`
     line-height: 28px;
 
     color: #00ADB5;
+
+    &:hover {
+        cursor: pointer;
+        color: #00d9e3;
+    }
 `;
 
 
 
-class Footer extends React.Component {
+const Footer = () => {
 
-    render() {
+        useEffect(() => {    
+            // Update the document title using the browser API
+            const location = useLocation();
+            console.log(location)  
+            //document.title = `You clicked ${count} times`;  
+            return;
+        });
+
         return (
             <Background>
                 <Wrapper>
@@ -231,7 +250,9 @@ class Footer extends React.Component {
                         <TittleWrapperStart>Start a proyect</TittleWrapperStart>
                         <TextWrapperStart>Cras id sodales enim. Suspendisse ac nunc ut nisi vestibulum.</TextWrapperStart>
                         <ButtonWrapperStart>
-                            <TextButtonWrapperStart>Contact</TextButtonWrapperStart>
+                            <Link to='/contact'>
+                                <TextButtonWrapperStart>Contact</TextButtonWrapperStart>
+                            </Link>
                         </ButtonWrapperStart>
                     </Start>
                     <Image src={Logo}></Image>
@@ -243,7 +264,6 @@ class Footer extends React.Component {
                 </Wrapper>
             </Background>
         );
-    }
 };
 
 

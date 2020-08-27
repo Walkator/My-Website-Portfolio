@@ -43,8 +43,12 @@ const Button = styled.button`
 
     max-height: 50px;
     min-height: 50px;
+
+    background-color: white;
+
     &:hover {
         cursor: pointer;
+        border: 2px solid #00d9e3;
     }
 
     @media (max-width: 650px) {
@@ -103,6 +107,10 @@ const ButtonText = styled.h1`
     line-height: 21px;
 
     color: #00ADB5;
+    &:hover {
+        cursor: pointer;
+        color: #00d9e3;
+    }
 `;
 
 

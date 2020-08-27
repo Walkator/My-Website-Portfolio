@@ -18,18 +18,18 @@ const Content = styled.div`
 
 const ContentFooter = styled.div`
     position: relative;
-    top: 850px; 
+    top: 950px; 
 
     @media (max-width: 1420px) {
-        top: 1320px;
+        top: 1420px;
     }
 
     @media (max-width: 1050px) {
-        top: 1800px;
+        top: 1900px;
     }
 
     @media (max-width: 750px) {
-        top: 2000px;
+        top: 2100px;
     }
 `;
 

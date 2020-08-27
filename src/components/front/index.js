@@ -65,10 +65,10 @@ const ImgLogo = styled.img`
 
 const Image = styled.img`
     position: absolute;
-    width: 661px;
+    width: 500px;
     height: 347px;
-    left: -335px;
-    top: 435px;
+    left: -245px;
+    top: 478px;
 
     @media (max-width: 750px) {
         width: 430px;
