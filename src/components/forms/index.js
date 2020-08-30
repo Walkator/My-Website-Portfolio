@@ -156,7 +156,7 @@ class Forms extends React.Component {
             <Wrapper>
                 <Tittle>Contact</Tittle>
 
-                <form onSubmit={this.handleSubmit}>
+                <form action="https://mailthis.to/danielaguilardomiguez@gmail.com" method="POST" encType="multipart/form-data" onSubmit={this.handleSubmit}>
                     <WrapperInputText>
                         <TitleLabel>Your Name
 

@@ -16,16 +16,7 @@ const Content = styled.div`
 
 const ContentFooter = styled.div`
     position: relative;
-    top: -50px; 
-
-    @media (max-width: 1250px) {
-        top: 10px;
-    }
-
-    @media (max-width: 1000px) {
-        top: 100px;
-    }
-
+    top: 0px; 
 `;
 
 class Contact extends React.Component {

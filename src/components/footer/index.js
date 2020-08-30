@@ -1,13 +1,16 @@
 import React, { useEffect} from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { withRouter } from "react-router";
 import Logo from "../../images/logo.jpg";
+import LogoGitHub from "../../images/github.png"
+import LogoLinkedin from "../../images/linkedin.png"
+import LogoTwitter from "../../images/twitter.png"
 
 const Background = styled.div`
     position: absolute;
     width: 100%;
-    height: 500px;
+    height: 370px;
     left: 0px;
     top: 0px;
 
@@ -24,9 +27,9 @@ const Wrapper = styled.div`
 const Start = styled.div`
     position: absolute;
     width: 1355px;
-    height: 200px;
+    height: 140px;
     left: -685px;
-    top: -100px;
+    top: -110px;
 
     background: #222431;
     border-radius: 20px;
@@ -52,7 +55,7 @@ const Terms = styled.h1`
     width: 494px;
     height: 0%;
     left: -250px;
-    top: 400px;
+    top: 300px;
 
     font-family: Roboto;
     font-style: normal;
@@ -71,15 +74,20 @@ const Terms = styled.h1`
 
 const Eclipse = styled.button`
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 49px;
+    height: 49px;
     left: -150px;
-    top: 309px;
+    top: 209px;
 
     background: #222831;
     border: 1px solid #000000;
     box-sizing: border-box;
     border-radius: 50%;
+
+    &:hover {
+        cursor: pointer;
+        border: 1px solid #00d9e3;
+    }
 `;
 
 const Line= styled.div`
@@ -87,7 +95,7 @@ const Line= styled.div`
     width: 600px;
     height: 0%;
     left: -310px;
-    top: 250px;
+    top: 180px;
 
     border: 1px solid #000000;
 
@@ -102,9 +110,8 @@ const Image = styled.img`
     width: 100px;
     height: 100px;
     left: -60px;
-    top: 120px;
+    top: 40px;
 
-    background: #C4C4C4;
     border-radius: 50%;
 `;
 
@@ -114,7 +121,7 @@ const TittleWrapperStart = styled.h1`
     width: 239px;
     height: 42px;
     left: 50px;
-    top: 45px;
+    top: 25px;
 
     font-family: Roboto;
     font-style: normal;
@@ -125,15 +132,16 @@ const TittleWrapperStart = styled.h1`
 
     color: #FFFFFF;
     @media (max-width: 1420px) {
+        font-size: 28px;
         width: 539px;
         top: -15px;
-        left: 220px;
+        left: 230px;
     }
 
     @media (max-width: 1050px) {
         width: 539px;
         top: -15px;
-        left: 75px;
+        left: 80px;
         font-size: 28px;
     }
 
@@ -148,8 +156,8 @@ const TextWrapperStart = styled.h1`
     position: absolute;
     width: 661px;
     height: 98px;
-    left: 300px;
-    top: 60px;
+    left: 350px;
+    top: 45px;
 
     font-family: Roboto;
     font-style: normal;
@@ -161,17 +169,21 @@ const TextWrapperStart = styled.h1`
     color: #FFFFFF;
 
     @media (max-width: 1420px) {
-        left: 160px;
+        font-size: 16px;
+        left: 170px;
         top: 40px;
     }
 
     @media (max-width: 1050px) {
-        width: 361px;
+        left: 30px;
+        width: 661px;
         font-size: 18px;
     }
 
     @media (max-width: 750px) {
-        left: 15px;
+        width: 400px;
+        left: 0px;
+        top: 30px;
         font-size: 16px;
     }
 `;
@@ -181,7 +193,7 @@ const ButtonWrapperStart = styled.button`
     width: 161px;
     height: 58px;
     left: 1100px;
-    top: 55px;
+    top: 40px;
 
     background: #222431;
     border: 2px solid #00ADB5;
@@ -195,18 +207,20 @@ const ButtonWrapperStart = styled.button`
     }
 
     @media (max-width: 1420px) {
-        top: 130px;
-        left: 410px;
+        width: 140px;
+        height: 38px;
+        top: 90px;
+        left: 420px;
     }
 
     @media (max-width: 1050px) {
-        top: 130px;
-        left: 260px;
+        top: 90px;
+        left: 270px;
     }
 
     @media (max-width: 750px) {
-        top: 130px;
-        left: 115px;
+        top: 100px;
+        left: 120px;
     }
 `;
 
@@ -229,47 +243,71 @@ const TextButtonWrapperStart = styled.h1`
         cursor: pointer;
         color: #00d9e3;
     }
+
+    @media (max-width: 1420px) {
+        font-size: 20px;
+        left: 0px;
+        top: -10px;
+    }
+`;
+
+const ImageSocialMedia = styled.img`
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 6px;
+    top: 6px;
 `;
 
 
+class Footer extends React.Component {
 
-const Footer = () => {
+    constructor(props) {
+        super(props);
+    }
 
-        useEffect(() => {    
-            // Update the document title using the browser API
-            const location = useLocation();
-            console.log(location)  
-            //document.title = `You clicked ${count} times`;  
-            return;
-        });
-
+    render() {
+        
+        const path = this.props.location.pathname.slice(1);
         return (
             <Background>
                 <Wrapper>
-                    <Start>
-                        <TittleWrapperStart>Start a proyect</TittleWrapperStart>
-                        <TextWrapperStart>Cras id sodales enim. Suspendisse ac nunc ut nisi vestibulum.</TextWrapperStart>
-                        <ButtonWrapperStart>
+                    {path != "contact" ? (
+                        <Start>
+                            <TittleWrapperStart>Start a proyect</TittleWrapperStart>
+                            <TextWrapperStart>Cras id sodales enim. Suspendisse ac nunc ut nisi vestibulum.</TextWrapperStart>
                             <Link to='/contact'>
-                                <TextButtonWrapperStart>Contact</TextButtonWrapperStart>
+                                <ButtonWrapperStart><TextButtonWrapperStart>Contact</TextButtonWrapperStart></ButtonWrapperStart>
                             </Link>
-                        </ButtonWrapperStart>
-                    </Start>
+                        </Start>
+                    ) : null}
+                
                     <Image src={Logo}></Image>
                     <Line></Line>
-                    <Eclipse></Eclipse>
-                    <Eclipse style={{'left': -33}}></Eclipse>
-                    <Eclipse style={{'left': 84}}></Eclipse>
+
+                    <a href="https://www.github.com">
+                        <Eclipse><ImageSocialMedia src={LogoGitHub}/></Eclipse>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com">
+                        <Eclipse style={{'left': -33}}><ImageSocialMedia src={LogoLinkedin}/></Eclipse>
+                    </a>
+                    
+                    <a href="https://www.twitter.com">
+                        <Eclipse style={{'left': 84}}><ImageSocialMedia src={LogoTwitter}/></Eclipse>
+                    </a>
+                        
                     <Terms>Terms & Conditions Privacy Policy Copyright © 2020 Walkator Ltd. All rights reserved. Site credit.</Terms>
+
                 </Wrapper>
             </Background>
         );
+    }
 };
 
 
 
-export default Footer;
-
+export default withRouter(Footer);
 /*
 <Background>
                 <Wrapper>

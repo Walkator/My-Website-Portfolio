@@ -15,19 +15,21 @@ import Contact from './pages/contact/index';
 
 
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/" component={LandingPage} exact />
-          <Route path="/portfolio" component={Portfolio} exact />
-          <Route path="/contact" component={Contact} exact />
-        </Switch>
-    </div>
-    
-    </Router>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div className="App">
+          <Switch>
+            <Route path="/" component={LandingPage} exact />
+            <Route path="/portfolio" component={Portfolio} exact />
+            <Route path="/contact" component={Contact} exact />
+          </Switch>
+      </div>
+      
+      </Router>
+    );
+  }
 }
 
 export default App;
