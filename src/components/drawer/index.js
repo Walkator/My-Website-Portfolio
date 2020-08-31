@@ -96,9 +96,9 @@ const Image = styled.img`
 
 const Title = styled.h1`
     position: absolute;
-    width: 171px;
+    width: 200px;
     height: 21px;
-    left: 137px;
+    left: 125px;
     top: 130px;
 
     font-family: Roboto;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/header/index'
-import Forms from '../../components/forms/index';
+import Form from '../../components/form/index';
 import Footer from '../../components/footer/index';
 
 const Wrapper = styled.body`
@@ -26,7 +26,7 @@ class Contact extends React.Component {
             <Wrapper>
                 <Content>
                     <Header></Header>
-                    <Forms></Forms>
+                    <Form></Form>
                 </Content>
                 <ContentFooter>
                     <Footer></Footer>

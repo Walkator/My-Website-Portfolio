@@ -25,6 +25,21 @@ const Tittle = styled.h1`
     color: #222831;
 `;
 
+const Description = styled.h1`
+    position: relative;
+    width: -500px;
+    height: 0%;
+    left: 0px;
+    top: -60px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 10px;
+    color: #000000;
+`;
+
 const WrapperInputText = styled.div`
     width: 65%;
     margin: auto;
@@ -123,7 +138,7 @@ const ButtonText = styled.h1`
 `;
 
 
-class Forms extends React.Component {
+class Form extends React.Component {
 
     constructor(props) {
         super(props);
@@ -155,7 +170,7 @@ class Forms extends React.Component {
         return (
             <Wrapper>
                 <Tittle>Contact</Tittle>
-
+                <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </Description>
                 <form action="https://mailthis.to/danielaguilardomiguez@gmail.com" method="POST" encType="multipart/form-data" onSubmit={this.handleSubmit}>
                     <WrapperInputText>
                         <TitleLabel>Your Name
@@ -182,4 +197,4 @@ class Forms extends React.Component {
     }
 }
 
-export default Forms;
+export default Form;

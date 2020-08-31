@@ -17,7 +17,7 @@ const Title = styled.h1`
     position: absolute;
     width: -500px;
     height: 0%;
-    left: -170px;
+    left: -130px;
     top: -30px;
 
     font-family: Roboto;

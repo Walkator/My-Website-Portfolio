@@ -11,7 +11,7 @@ import './App.css';
 import LandingPage from './pages/landing/index';
 import Portfolio from './pages/portfolio/index';
 import Contact from './pages/contact/index';
-
+require('typeface-roboto')
 
 
 

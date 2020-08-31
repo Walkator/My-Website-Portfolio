@@ -7,6 +7,7 @@ import LogoGitHub from "../../images/github.png"
 import LogoLinkedin from "../../images/linkedin.png"
 import LogoTwitter from "../../images/twitter.png"
 
+
 const Background = styled.div`
     position: absolute;
     width: 100%;
@@ -67,7 +68,9 @@ const Terms = styled.h1`
     color: #EEEEEE;
 
     @media (max-width: 750px) {
-        font-size: 16px;
+        left: -200px;
+        width: 394px;
+        font-size: 15px;
     }
 `;
 
@@ -192,7 +195,7 @@ const ButtonWrapperStart = styled.button`
     position: absolute;
     width: 161px;
     height: 58px;
-    left: 1100px;
+    left: 1140px;
     top: 40px;
 
     background: #222431;
@@ -286,6 +289,7 @@ class Footer extends React.Component {
                     <Line></Line>
 
                     <a href="https://www.github.com">
+                    
                         <Eclipse><ImageSocialMedia src={LogoGitHub}/></Eclipse>
                     </a>
                     
