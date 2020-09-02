@@ -5,122 +5,86 @@ import iconDatabase from '../../images/Database.svg';
 import iconTerminal from '../../images/Terminal.svg';
 
 const Wrapper = styled.div`
-    position: absolute;
-    width: 0px;
-    height: 50%;
-    left: 50%;
-    top: 1313px;
+    position: relative;
+    width: 100%;
+    height: 625px;
+    left: 0px;
+    top: 40px;
 
-    @media (max-width: 750px) {
-        top: 1520px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    
+    @media (max-width: 1200px) {
+        flex-direction: column;
+        top: 290px;
+        margin-bottom: 400px;
     }
 `;
 
 const Container = styled.div`
-    position: absolute;
-    width: 447px;
-    height: 452px;
-    left: -700px;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    left: 0px;
     top: 0px;
+
+    margin: 18px;
 
     background: #FFFFFF;
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-
-    @media (max-width: 1420px) {
-        left: -500px;
-    }
-
-    @media (max-width: 1050px) {
-        left: -220px;
-    }
 `;
-
-const Container2 = styled.div`
-    position: absolute;
-    width: 447px;
-    height: 452px;
-    left: -230px;
-    top: 0px;
-
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-
-    @media (max-width: 1420px) {
-        left: 50px;
-    }
-
-    @media (max-width: 1050px) {
-        left: -220px;
-        top: 482px;
-    }
-`;
-
-const Container3 = styled.div`
-    position: absolute;
-    width: 447px;
-    height: 452px;
-    left: 240px;
-    top: 0px;
-
-    background: #FFFFFF;
-    border: 1px solid #E5E5E5;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-
-    @media (max-width: 1420px) {
-        top: 490px;
-        left: -235px;
-    }
-
-    @media (max-width: 1050px) {
-        top: 964px;
-        left: -220px;
-    }
-`;
-
 
 const Image = styled.img`
-    position: absolute;
+    position: relative;
     width: 150px;
     height: 150px;
-    left: 150px;
+    left: 0px;
     top: 0px;
+
+    @media (max-width: 1200px) {
+        top: -20px;
+    }
 `;
 
 const Title = styled.h1`
-    position: absolute;
-    width: 200px;
+    position: relative;
+    width: 100%;
     height: 21px;
-    left: 125px;
-    top: 130px;
+    left: 0px;
+    top: -20px;
 
+    margin: auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
 
     text-align: center;
 
     color: #222831;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        top: -50px;
+    }
 `;
 
 
 const Description = styled.h1`
-    position: absolute;
-    width: 374px;
-    height: 54px;
-    left: 35px;
-    top: 180px;
+    position: relative;
+    width: 90%;
+    height: 50px;
+    left: 0px;
+    top: 10px;
 
+    margin: auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -129,14 +93,19 @@ const Description = styled.h1`
     text-align: center;
 
     color: #000000;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        top: -30px;
+    }
 `;
 
 const TextPre = styled.h1`
-    position: absolute;
-    width: 271px;
-    height: 57px;
-    left: 85px;
-    top: 270px;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 50px;
 
     font-family: Roboto;
     font-style: normal;
@@ -146,14 +115,19 @@ const TextPre = styled.h1`
     text-align: center;
 
     color: #00ADB5;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        top: -10px;
+    }
 `;
 
-const Languages = styled.h1`
-    position: absolute;
-    width: 337px;
-    height: 75px;
-    left: 50px;
-    top: 300px;
+const Technologies = styled.h1`
+    position: relative;
+    width: 80%;
+    height: 20px;
+    left: 0px;
+    top: 30px;
 
     font-family: Roboto;
     font-style: normal;
@@ -163,6 +137,11 @@ const Languages = styled.h1`
     text-align: center;
 
     color: #000000;
+    margin: auto;
+
+    @media (max-width: 1200px) {
+        top: -30px;
+    }
 `;
 
 
@@ -176,22 +155,22 @@ class Drawer extends React.Component {
                     <Title>Backed Develoment</Title>
                     <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
                     <TextPre>Languages & tools I've learned and used:</TextPre>
-                    <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
+                    <Technologies>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Technologies>
                 </Container>
-                <Container2>
+                <Container>
                     <Image src={iconDatabase} />
                     <Title>Database Develoment</Title>
                     <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
                     <TextPre>Languages & tools I've learned and used:</TextPre>
-                    <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
-                </Container2>
-                <Container3>
+                    <Technologies>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Technologies>
+                </Container>
+                <Container>
                     <Image src={iconMobile} />
                     <Title>Mobile Develoment</Title>
                     <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse aliquam imperdiet lacinia. Mauris eget ligula nisi. Mauris bibendum mauris elit.</Description>
                     <TextPre>Languages & tools I've learned and used:</TextPre>
-                    <Languages>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Languages>
-                </Container3>
+                    <Technologies>Nullam, efficitur, massa, consequat, porttitor, varius, Aliquam, blandit, accumsan, lacus.</Technologies>
+                </Container>
             </Wrapper>
         );
     }

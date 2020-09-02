@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from '../../components/header/index'
-import Jobs from '../../components/jobs/index'
+import Jobs from '../../components/drawer/indexPortfolio'
 import Footer from '../../components/footer/index'
 
 const Wrapper = styled.body`

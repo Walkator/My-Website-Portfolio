@@ -3,18 +3,25 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     position: relative;
+    width: 100%;
+    height: 900px;
+    left: 0px;
+    top: 50px;
     margin: auto;
-    width: 70%;
-    top: 250px;
-    height: 400px;
 `;
 
 const Tittle = styled.h1`
     position: relative;
-    width: -500px;
+    width: 95%;
     height: 0%;
     left: 0px;
-    top: -100px;
+    top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -27,56 +34,65 @@ const Tittle = styled.h1`
 
 const Description = styled.h1`
     position: relative;
-    width: -500px;
-    height: 0%;
+    width: 95%;
+    height: 0px;
     left: 0px;
-    top: -60px;
+    top: 30px;
+ 
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 10px;
+    line-height: 21px;
     color: #000000;
+
+    padding-bottom: 65px;
 `;
 
 const WrapperInputText = styled.div`
     width: 65%;
     margin: auto;
-    align-items: center;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    
-    @media (min-width: 1300px) {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    align-items: center;
+    flex-direction: column;
 `;
 
 const InputText = styled.input`
-    /*width: 20%;*/
+    position:relative;
+    width: 80%;
     padding: 15px 20px;
-    margin: 8px;
+    margin: 6px;
     color: #222831;
     
+    max-width: 500px;
     border: none;
     border-radius: 8px;
     border: 1px solid #00ADB5;
-
-    cursor: pointer;
 `;
 
 const TextArea = styled.textarea`
-    width: 90%;
+    position:relative;
+    width: 80%;
     height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 1px solid #00ADB5;
+    left: 0px;
+    padding: 12px 30px;
+    margin: 0px;
+    color: #222831;
+
+    max-width: 500px;
+    border: none;
     border-radius: 8px;
-    background-color: #FFFFFF;
-    font-size: 14px;
+    border: 1px solid #00ADB5;
     resize: none;
+
+   
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 `;
 
 const TitleLabel = styled.h1`
@@ -92,6 +108,7 @@ const TitleLabel = styled.h1`
     line-height: 56px;
 
     color: #222831;
+    
 `;
 
 const Button = styled.button`
@@ -180,12 +197,11 @@ class Form extends React.Component {
                         <TitleLabel>Your Email
                             <InputText type="email" name="email" value={this.state.email} onChange={this.handleInputChange}></InputText>
                         </TitleLabel>
-                        
+                        <TitleLabel>Your Message
+                            <TextArea type="text" name="message" value={this.state.message} onChange={this.handleInputChange}></TextArea>
+                        </TitleLabel>
                     </WrapperInputText>
                     <p></p>
-                    <TitleLabel>Your Message
-                        <TextArea type="text" name="message" value={this.state.message} onChange={this.handleInputChange}></TextArea>
-                    </TitleLabel>
                     <Button type="submit" value="Submit">
                         <ButtonText>Submit</ButtonText>
                     </Button>

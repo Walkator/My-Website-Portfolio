@@ -3,18 +3,24 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
     position: relative;
+    width: 100%;
+    height: 850px;
+    left: 0px;
+    top: 50px;
     margin: auto;
-    width: 90%;
-    top: 250px;
-    height: 400px;
 `;
 
 const Tittle = styled.h1`
     position: relative;
-    width: -500px;
+    width: 95%;
     height: 0%;
     left: 0px;
-    top: -100px;
+    top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -27,10 +33,12 @@ const Tittle = styled.h1`
 
 const Description = styled.h1`
     position: relative;
-    width: -500px;
-    height: 0%;
+    width: 95%;
+    height: 0px;
     left: 0px;
-    top: -60px;
+    top: 30px;
+
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -38,6 +46,8 @@ const Description = styled.h1`
     font-size: 18px;
     line-height: 21px;
     color: #000000;
+
+    padding-bottom: 75px;
 `;
 
 const WrapperContainers = styled.div`
@@ -55,7 +65,7 @@ const WrapperContainers = styled.div`
     @media (max-width: 1200px) {
         flex-direction: column;
         height: 1000px;
-        top: 50px;
+        top: 100px;
     }
 `;
 
@@ -125,8 +135,6 @@ const DescriptionContainer = styled.h1`
     text-align: center;
 
     color: #000000;
-
-   
 `;
 
 

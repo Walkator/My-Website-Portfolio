@@ -4,21 +4,25 @@ import imageFrame from '../../images/imageFrame.svg';
 import Logo from "../../images/logo.jpg";
 
 const Wrapper = styled.div`
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 50%;
-    top: 200px;
-
-    line-height: 1.5em;
+    position: relative;
+    width: 100%;
+    height: 750px;
+    left: 0px;
+    top: 50px;
+    margin: auto;
 `;
 
 const Title = styled.h1`
-    position: absolute;
-    width: -500px;
+    position: relative;
+    width: 95%;
     height: 0%;
-    left: -130px;
-    top: -30px;
+    left: 0px;
+    top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
@@ -27,54 +31,56 @@ const Title = styled.h1`
     line-height: 56px;
 
     color: #222831;
-    
 `;
 
 const Description = styled.h1`
-    position: absolute;
-    width: 700px;
-    height: 0%;
-    left: -350px;
-    top: 70px;
+    position: relative;
+    width: 95%;
+    height: 0px;
+    left: 0px;
+    top: 30px;
+
+    margin: auto;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
-    /* identical to box height */
     color: #000000;
 
-    @media (max-width: 750px) {
-        overflow-wrap: break-word;
-        width: 400px;
-        left: -200px;
-    }
+    padding-bottom: 150px;
 `;
 
 const ImgLogo = styled.img`
-    position: absolute;
+    position: relative;
     width: 200px;
     height: 200px;
-    left: -100px;
-    top: 170px;
+    left: 0px;
+    top: 0px;
+
+    margin-left: auto;
+    margin-right: auto;
 
     border-radius: 50%;
     background: #C4C4C4;
+    display: block;
+
 `;
 
 const Image = styled.img`
-    position: absolute;
-    width: 500px;
-    height: 347px;
-    left: -245px;
-    top: 478px;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    left: 0px;
+    top: 0px;
 
-    @media (max-width: 750px) {
-        width: 430px;
-        left: -217px;
-        top: 496px;
-    }
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 151px;
+
+    display: block;
 `;
 
 class Front extends React.Component {
