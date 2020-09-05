@@ -1,6 +1,21 @@
 # Prototype
 ![setup-screenshot](images/prototype.png)
 
+
+## Landing Page
+![setup-screenshot](images/1.png)
+
+## Portfolio
+![setup-screenshot](images/2.png)
+
+## Contact
+![setup-screenshot](images/3.png)
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

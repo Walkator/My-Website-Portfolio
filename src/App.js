@@ -22,6 +22,7 @@ class App extends React.Component {
         <div className="App">
           <Switch>
             <Route path="/" component={LandingPage} exact />
+            <Route path="/my-website" component={LandingPage} exact />
             <Route path="/portfolio" component={Portfolio} exact />
             <Route path="/contact" component={Contact} exact />
           </Switch>
