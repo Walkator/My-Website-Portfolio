@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Wrapper = styled.div`
     position: relative;
@@ -38,7 +38,7 @@ const Description = styled.h1`
     height: 0px;
     left: 0px;
     top: 30px;
- 
+
     margin: auto;
 
     font-family: Roboto;
@@ -62,20 +62,20 @@ const WrapperInputText = styled.div`
 `;
 
 const InputText = styled.input`
-    position:relative;
+    position: relative;
     width: 80%;
     padding: 15px 20px;
     margin: 6px;
     color: #222831;
-    
+
     max-width: 500px;
     border: none;
     border-radius: 8px;
-    border: 1px solid #00ADB5;
+    border: 1px solid #00adb5;
 `;
 
 const TextArea = styled.textarea`
-    position:relative;
+    position: relative;
     width: 80%;
     height: 150px;
     left: 0px;
@@ -86,10 +86,9 @@ const TextArea = styled.textarea`
     max-width: 500px;
     border: none;
     border-radius: 8px;
-    border: 1px solid #00ADB5;
+    border: 1px solid #00adb5;
     resize: none;
 
-   
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -108,14 +107,13 @@ const TitleLabel = styled.h1`
     line-height: 56px;
 
     color: #222831;
-    
 `;
 
 const Button = styled.button`
     position: relative;
 
     color: #ffffff;
-    border: 2px solid #00ADB5;
+    border: 2px solid #00adb5;
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 8px;
@@ -147,68 +145,62 @@ const ButtonText = styled.h1`
     font-size: 18px;
     line-height: 21px;
 
-    color: #00ADB5;
+    color: #00adb5;
     &:hover {
         cursor: pointer;
         color: #00d9e3;
     }
 `;
 
-
 class Form extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
-          name: '',
-          email: '',
-          message: ''
+        name: "",
+        email: "",
+        message: "",
         };
-    
+
         this.handleInputChange = this.handleInputChange.bind(this);
-      }
-    
-      handleInputChange(event) {
+    }
+
+    handleInputChange(event) {
         const value = event.target.value;
         const name = event.target.name;
 
         this.setState({
-          [name]: value    
+        [name]: value,
         });
-      }
+    }
 
-      handleSubmit(event) {
-        alert("Name: " + this.state.name + " Email: " + this.state.email + " Message: " + this.state.message);
-      }
-
+    //handleSubmit(event) {
+    //  alert("Name: " + this.state.name + " Email: " + this.state.email + " Message: " + this.state.message);
+    //}
 
     render() {
-
         return (
-            <Wrapper>
-                <Tittle>Contact</Tittle>
-                <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </Description>
-                <form action="https://mailthis.to/danielaguilardomiguez@gmail.com" method="POST" encType="multipart/form-data" onSubmit={this.handleSubmit}>
-                    <WrapperInputText>
-                        <TitleLabel>Your Name
-
-                            <InputText type="text" name="name" value={this.state.name} onChange={this.handleInputChange}></InputText>
-                        </TitleLabel>
-                        <TitleLabel>Your Email
-                            <InputText type="email" name="email" value={this.state.email} onChange={this.handleInputChange}></InputText>
-                        </TitleLabel>
-                        <TitleLabel>Your Message
-                            <TextArea type="text" name="message" value={this.state.message} onChange={this.handleInputChange}></TextArea>
-                        </TitleLabel>
-                    </WrapperInputText>
-                    <p></p>
-                    <Button type="submit" value="Submit">
-                        <ButtonText>Submit</ButtonText>
-                    </Button>
-                </form>
-
-               
-            </Wrapper>
+        <Wrapper>
+            <Tittle>Contact</Tittle>
+            <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}</Description>
+            
+            <form action="https://mailthis.to/email@example.com" method="POST" encType="multipart/form-data" onSubmit={this.handleSubmit}>
+                <WrapperInputText>
+                    <TitleLabel>Your Name
+                        <InputText type="text" name="name" value={this.state.name} onChange={this.handleInputChange} placeholder="Jhon"></InputText>
+                    </TitleLabel>
+                    <TitleLabel>Your Email
+                        <InputText type="email" name="email" value={this.state.email} onChange={this.handleInputChange} placeholder="example@example.com"></InputText>
+                    </TitleLabel>
+                    <TitleLabel>Your Message
+                        <TextArea type="text" name="message" value={this.state.message} onChange={this.handleInputChange} placeholder="Hello,..."></TextArea>
+                    </TitleLabel>
+                </WrapperInputText>
+                <p></p>
+                <Button type="submit" value="Submit">
+                    <ButtonText>Submit</ButtonText>
+                </Button>
+            </form>
+        </Wrapper>
         );
     }
 }

@@ -19,7 +19,7 @@ const Title = styled.h1`
     width: 90%;
     height: 20px;
     left: 0px;
-    top: 20px;
+    top: 30px;
 
     margin: auto;
 
@@ -37,9 +37,9 @@ const Title = styled.h1`
 
 const Text = styled.h1`
     position: relative;
-    width: 65%;
+    width: 45%;
     height: 30%;
-    top: 40px;
+    top: 35px;
 
     margin: auto;
 
@@ -53,6 +53,14 @@ const Text = styled.h1`
     text-align: center;
 
     color: #FFFFFF;
+
+    @media (max-width: 1200px) {
+        width: 65%;
+    }
+
+    @media (max-width: 800px) {
+        top: 50px;
+    }
 `;
 
 
