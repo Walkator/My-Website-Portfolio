@@ -1,7 +1,3 @@
-# Prototype
-![setup-screenshot](images/prototype.png)
-
-
 ## Landing Page
 ![setup-screenshot](images/1.png)
 
