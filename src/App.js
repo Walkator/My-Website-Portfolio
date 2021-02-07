@@ -26,8 +26,7 @@ class App extends React.Component {
             <Route path="/portfolio" component={Portfolio} exact />
             <Route path="/contact" component={Contact} exact />
           </Switch>
-      </div>
-      
+        </div>
       </Router>
     );
   }
